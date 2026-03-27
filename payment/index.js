@@ -90,8 +90,9 @@ const createCashfreeSession = async (req, res) => {
       },
     });
 
-    const data = response.data;
-    res.json({ data: data });
+
+ const data = response.data;
+res.json({ data: data });
   } catch (error) {
     console.error("Error creating session:", error.response?.data || error);
     res.status(500).json({ message: "Failed to create session", error: error });
@@ -110,9 +111,8 @@ const getCashfreePaymentDetails = async (req, res) => {
         "x-api-version": "2025-01-01",
       },
     });
-
-    const data = response.data;
-    res.json({ data: data });
+const data = response.data;
+res.json({ data: data });
   } catch (error) {
     console.error(
       "Error fetching payment details:",
