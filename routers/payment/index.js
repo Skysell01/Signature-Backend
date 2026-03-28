@@ -31,6 +31,7 @@ router.post("/razorpay", async (req, res) => {
 router.post("/create-session", PaymentController.createCashfreeSession);
 
 router.get("/details/:id", PaymentController.getCashfreePaymentDetails);
+router.get("/verify/:id", PaymentController.verifyCashfreePayment);
 
 router.post("/create-session-v2", PaymentControllerV2.createCashfreeSessionV2);
 router.get("/details-v2/:id", PaymentControllerV2.getCashfreePaymentDetailsV2);
